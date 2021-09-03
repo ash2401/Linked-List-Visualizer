@@ -35,7 +35,7 @@ a:hover{
 
     transition: font-size .2s ease-in;
     color: #D0F8FF;
-    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+    text-shadow: 0 0 10px #A5F1FF, 0 0 10px #A5F1FF,
              0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
              0 0 40px #A5F1FF;
     
@@ -43,7 +43,7 @@ a:hover{
 
 .linkedListMain .ui{
     display: grid;
-    background-color: lightseagreen;
+    /*background-color: lightblue;*/
     grid-area: ui;
     margin-left: 15px;
     max-width: 400px;
@@ -69,7 +69,7 @@ a:hover{
 	text-decoration:none;	
 	
 	color:rgba(28, 190, 131, 1);
-	brackground-color:transparent;
+	
 	border:1px solid rgba(28, 190, 131, 1);
 	border-radius:100px;
 	

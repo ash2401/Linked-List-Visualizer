@@ -5,6 +5,7 @@ export default class LinkedList {
         this.head = "null";
         this.length = 0;
         this.action = "No Activity!";
+        this.tail = "null";
        
     }
 
@@ -15,6 +16,16 @@ export default class LinkedList {
         this.length++;
         this.action = "Node added " + value;
         return this;
+    }
+
+    addToTail(value) {
+        const newNode = { value };
+        newNode.next = this.tail;
+        this.tail = newNode;
+        this.length++;
+        this.action = "Node added to tail" + value;
+        return this;
+        
     }
 
     removeFromHead() {
@@ -33,13 +44,17 @@ export default class LinkedList {
 
     find(val) {
         let thisNode = this.head;
+        let count = 0;
 
         while (thisNode) {
             if (thisNode.value === val) {
+                console.log(count);
                 return thisNode;
+                //return count;
             }
 
             thisNode = thisNode.next;
+            count++;
         }
 
         return thisNode;

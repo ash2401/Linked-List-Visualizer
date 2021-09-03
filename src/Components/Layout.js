@@ -14,6 +14,7 @@ export default class Layout extends React.Component {
         this.addToHead = this.addToHead.bind(this);
         this.remove = this.remove.bind(this);
         this.removeFromHead = this.removeFromHead.bind(this);
+        //this.find=this.find.bind(this);
 
     }
 
@@ -31,6 +32,18 @@ export default class Layout extends React.Component {
         e.preventDefault()
         this._inputElement.focus()
     }
+
+    /*addToTail(e) {
+        if(this._inputElement !== "") {
+            this.setState(list.addToTail(this._inputElement.value))
+
+        };
+
+        this._inputElement.value = "";
+        console.log(list)
+        e.preventDefault()
+        this._inputElement.focus();
+    }*/
 
 
 
@@ -53,6 +66,20 @@ export default class Layout extends React.Component {
         this._inputDelete.focus()
 
     }
+
+    /*find(e)  {
+        if(this._inputFind !== "")
+        {
+        list.find(this._inputFind.value)
+        };
+
+        this._inputFind="";
+        this.setState(list)
+        console.log(list)
+        e.preventDefault();
+        //this._inputFind.focus()
+
+    }*/
 
     render() {
         let current = this.state.head;
@@ -78,12 +105,20 @@ export default class Layout extends React.Component {
                     </input>+</button>
                     </form>
 
-                    {/*<!---<form onSubmit={this.find}>
+                    
+                    {/*<form onSubmit={this.addToTail}>
+                        
+                        <button type="submit"><input ref={(a) => this._inputElement = a}
+                        placeholder="Add To Tail">
+                    </input>+</button>
+                    </form>*/}
+
+                    {/*<form onSubmit={this.find}>
                         <input ref={(a) => this._inputFind = a}
                             placeholder="Highlight Node">
                         </input>
-                        <button type="submit">Find</button>
-                    </form>--->*/}
+                        <button type="submit" onClick={this.find}>Find</button>
+                        </form>*/}
 
                     <form onSubmit={this.remove}>
                         <button type="submit"> <input ref={(a) => this._inputDelete = a}
