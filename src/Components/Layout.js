@@ -157,7 +157,7 @@ render() {
                 <form onSubmit={this.find}>
                 <button type="submit">
                         <input ref={(a) => this._inputFind = a} id="something"
-                    placeholder="Highlight at Index"> 
+                    placeholder="Node at Index"> 
                     </input>🔍</button>
                     
                 </form>
