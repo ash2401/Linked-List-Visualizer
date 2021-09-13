@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
 import Layout from "./Components/Layout";
+import logo from './logo.svg';
+import './App.css';
+import layout from './Components/Layout';
 
-class App extends Component {
-
-  render() {
-
-    return (
-
-      <Layout />
-
-    );
-  }
+const App = () => {
+  return (
+  <Layout/>
+  );
 }
 
 export default App;
