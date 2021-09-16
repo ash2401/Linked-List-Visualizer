@@ -1,7 +1,7 @@
 import React from "react";
 import "./LinkedList.css";
 import LinkedList from "./LinkedList"
-import Node from "./Node";
+//import Node from "./Node";
 
 const list = new LinkedList()
 
@@ -29,7 +29,7 @@ constructor(props) {
 
 componentDidMount() {
     this._inputElement.focus();
-    //this._inputElement2.focus();
+    
 }
 
 
@@ -66,7 +66,6 @@ find(e) {
         
         console.log(list.find(this._inputFind.value))
 
-      //  this.setState(list.find(this._inputFind))
     };
     this.setState(list)
     this._inputFind.focus()
@@ -94,9 +93,7 @@ insertAt(e) {
         console.log(this._inputData.value + this._inputIndex.value);
         list.insertAt(this._inputData.value, this._inputIndex.value)
         this.setState(list)
-        //list.insertAt(this._inputData.value,this._inputIndex.value)
-        //console.log(list.insertAt(this._inputData.value, this._inputIndex.value))
-    //    this.setState(list.insertAt(this._inputData.value,this._inputIndex.value))
+        
     }
     
     this._inputData.value = "";
@@ -118,11 +115,9 @@ render() {
     let items = [];
     let currentNode = this.state.head;
 
-    //const {list} = this.state;
+    
     console.log(list)
-    //list.map(list => console.log())
-    //console.log(currentNode.data)
-    //console.log(list)
+    
     
 
     while(currentNode) {
@@ -159,7 +154,6 @@ render() {
                         <input ref={(a) => this._inputFind = a} id="something"
                     placeholder="Node at Index"> 
                     </input>🔍</button>
-                    
                 </form>
 
                 

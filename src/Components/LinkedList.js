@@ -12,7 +12,7 @@ export default class LinkedList {
     addToHead(data) {
             this.head = new Node(data, this.head);
             this.size++;
-        this.action = "Node added " + data;
+        this.action = "Node added to Head " + data;
         return this;
     }
     
@@ -78,7 +78,7 @@ export default class LinkedList {
             prev.next = node;
         }
         this.size++;
-        this.action = "Node " + element +" inserted at "  + index;
+        this.action = "Node " + element +" inserted at "  + index + " index";
     }
 
         
@@ -91,7 +91,7 @@ export default class LinkedList {
 
         while(current) {
             if(count == index) {
-                this.action = "Node " + current.data + " at " + index; 
+                this.action = "Node " + current.data + " at " + index + " index"; 
                 return this.action;
             }
             count++;
@@ -122,6 +122,7 @@ export default class LinkedList {
 
             previous.next = current.next;
         }
+        this.action = "Node deleted at index " + index;
         this.size--;
     }  
     //Clear list
@@ -132,6 +133,4 @@ export default class LinkedList {
         this.action = "List Cleared "; 
         return this;
     }
-    //Print list data
-
 }
